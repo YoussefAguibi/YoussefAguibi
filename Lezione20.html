@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Jeraghese</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #B7D3F2;
+            font-family: "Poppins", sans-serif;
+        }
+        
+        #container{
+            height: auto;
+            width: 100%;
+        }
+        #intestazione{
+            height: 40vh;
+            width: 100%;
+            background-image: url("jeraghese.png");
+            background-size: 400px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #navbar{
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15%;
+            padding: 30px;
+            background-color: #A1C6EA;
+            position: sticky;
+            top: 0;
+        }
+        .testonav{
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+            background-color: #A1C6EA;
+        }
+        #titolo{
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            font-weight: 10%;
+            color: blue;
+        }
+        #contattaci{
+            height: auto;
+            margin: 0 auto;
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #personale{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        .perso{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: blue;
+            font-size: 30px;
+        }
+        #servizio{
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        .img{
+            height: 400px;
+            width: 600px;
+        }
+        #servizi{
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5%;
+            margin-right: 5%;
+        }
+        #modifica{
+            margin-top: 10px;
+        }
+        .servizi{
+            text-decoration: none;
+            background-color: red;
+            color: black;
+            padding: 10px;
+        }
+        .servizi:hover{
+            background-color: blue;
+        }
+        #vantaggi{
+            width: 100%;
+            height: auto;
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #vantaggiserv{
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        .squadre{
+            height: 350px;
+            width: 350px;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+        }
+        .elemento_centrale{
+            width: 350px;
+            height: 550px;
+            border:1px solid black;
+            border-radius: 20px;
+            margin: 10px;
+        }
+        .testoserv{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            font-size: 20px;
+        }
+        #telecronaca1{
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #telecronaca2{
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            flex-direction: column;
+        }
+        #telecronaca3{
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            flex-direction: column;
+        }
+        #telecronaca4{
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            flex-direction: column;
+        }
+        #forum{
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .elemento_forum{
+            width: 550px;
+            height: 300px;
+            border:1px solid black;
+            border-radius: 20px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .persoa{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: blue;
+            font-size: 30px;
+            margin: 0px 20px 0px 20px;
+            position: relative;
+            top: 0px;
+        }
+        .privacy{
+            color: red;
+        }
+        .elementi{
+            width: 70%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        #footer{
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @media only screen and (max-width: 768px) {
+        #navbar {
+        flex-direction: column;
+        padding: 5px;
+        }
+
+        #navbar .testonav {
+        font-size: 12px;
+        padding: 5px 10px;
+        margin: 3px 0;
+        }
+
+        #titolo {
+        font-size: 20px;
+        }
+
+        #personale, #servizio, #vantaggi {
+        padding: 5px;
+        }
+
+        .perso {
+        font-size: 16px;
+        }
+
+        #servizi > div {
+        width: 100%;
+        padding: 8px;
+        }
+
+        .servizi {
+            font-size: 14px;
+            padding: 8px;
+        }
+
+        .elemento_centrale {
+            width: 100%;
+            padding: 8px;
+        }
+}
+    </style>
+
+</head>
+<body>
+    
+    <div id="container">
+        <div id="navbar">
+            <p><a class="testonav" href="https://www.facebook.com/p/USD-Jeraghese-Calcio-1953-100057218418830/?locale=it_IT">Home</a></p>
+            <p><a class="testonav" href="https://www.paginegialle.it/jerago-con-orago-va/associazioni-sportive/unione-sportiva-jeraghese">Servizi</a></p>
+            <p><a class="testonav" href="https://varesesport.com/2022/1-jeraghese-e-ceresium-ne-fanno-4-tris-per-il-cantello-festa-don-bosco-e-cuassese-beffata/">Vantaggi</a></p>
+            <p><a class="testonav" href="https://www.sprintesport.it/tag/Jeraghese/1">Novità</a></p>
+            <p><a class="testonav" href="https://0331735224.telefono.click/0331735224-unione-sportiva-jeraghese-varese.html">Contatti</a></p>
+        </div>
+        <div id="intestazione">
+        </div>
+        <div id="titolo">
+            <p>Jeraghese Calcio</p>
+        </div>
+        <div id="contattaci">
+            <a href="https://0331735224.telefono.click/0331735224-unione-sportiva-jeraghese-varese.html"><img src="contattaci.PNG"/></a>
+        </div>
+
+        <div id="personale">
+            <p class="perso">Chi siamo, cosa facciamo</p>
+            <p>_________________________</p>
+            <p>
+                <br>Jeraghese Calcio è una società sportiva dedicata
+                <br> alla promozione e alla pratica del calcio
+                <br> a tutti i livelli.
+                 Fondata con l’obiettivo di creare <br>
+                 un ambiente inclusivo e stimolante,
+                <br> Jeraghese Calcio si impegna a <br>
+                coltivare il talento sportivo
+                <br> e a promuovere i valori della lealtà,<br>
+                 del rispetto e del lavoro di squadra.
+                <br> Da anni siamo un punto di riferimento<br>
+                 per la comunità, offrendo programmi <br>
+                 di allenamento per giovani e adulti,
+                <br> partecipando a campionati locali e regionali
+                <br> e organizzando eventi per coinvolgere<br>
+                 appassionati di tutte le età.
+                <br> <br>La nostra missione è quella di andare oltre<br>
+                 il semplice risultato sportivo,
+                <br> creando esperienze significative<br>
+                 per atleti, famiglie e tifosi,
+                <br> e rafforzando il senso di <br>
+                appartenenza alla nostra comunità.
+                <br> Siamo orgogliosi di rappresentare Jerago
+                <br> e di contribuire alla crescita del calcio<br>
+                 come strumento di aggregazione e divertimento.<br><br><br><br>
+            </p>
+        </div>
+        <div id="servizio">
+            <p class="perso">
+                Servizi offerti<br>
+            </p>
+            <p>
+                _________________________
+            </p>
+            <p class="perso">
+                <br>Prima squadra
+            </p>
+            <img class="img" src="primasquad.png"/>
+        </div>
+        <div id="servizi">
+            <div>
+                <p class="perso"><b>Scuola <br>calcio</b><br></p>
+                <p>
+                    <br>La nostra Scuola Calcio è 
+                    <br>dedicata ai più piccoli,
+                    <br>offrendo un ambiente sicuro 
+                    <br>e stimolante per apprendere
+                    <br> le basi del calcio.
+                    <br> Attraverso istruttori qualificati
+                    <br> e programmi personalizzati,
+                    <br> ci impegniamo a sviluppare
+                    <br> le capacità tecniche e
+                    <br> motorie dei giovani atleti,
+                    <br> trasmettendo valori come
+                    <br> il rispetto, il lavoro di
+                    <br> squadra e la disciplina.
+                </p>
+                    <div id="modifica">
+                        <a class="servizi" href="https://www.instagram.com/jeraghese1953/?hl=it">Scopri di più</a>
+                    </div>
+            </div>
+            <div>
+                <p class="perso"><b>Squadre <br>giovanili</b><br></p>
+                <p>
+                    <br>Le squadre giovanili rappresentano
+                    <br> il cuore pulsante della 
+                    <br>Jeraghese Calcio. Partecipiamo
+                    <br> a competizioni locali e regionali,
+                    <br> offrendo ai ragazzi l'opportunità 
+                    <br>di crescere come giocatori 
+                    <br>e come persone. Gli allenatori
+                    <br> lavorano per potenziare il 
+                    <br>talento individuale, 
+                    <br>promuovendo al contempo 
+                    <br>l'importanza della collaborazione 
+                    <br>e dello spirito di squadra.
+                </p>
+                    <div id="modifica">
+                        <a class="servizi" href="">Scopri di più</a>
+                    </div>
+            </div>
+            <div>
+                <p class="perso"><b>Eventi e<br> tornei</b><br></p>
+                <p>
+                    <br>Organizziamo regolarmente eventi
+                    <br> e tornei per appassionati 
+                    <br>di tutte le età, creando momenti 
+                    <br>di aggregazione e divertimento. 
+                    <br>Queste iniziative favoriscono l’incontro
+                    <br> tra comunità locali e permettono 
+                    <br>ai nostri atleti di mettersi 
+                    <br>alla prova in un contesto 
+                    <br>competitivo ma sempre rispettoso.
+                </p>
+                    <div id="modifica">
+                        <a class="servizi" href="">Scopri di più</a>
+                    </div>
+            </div>
+            <div>
+                <p class="perso"><b>Collaborazioni e<br> sponsorizzazioni</b><br></p>
+                <p><br>La Jeraghese Calcio lavora
+                    <br> fianco a fianco con 
+                    <br>aziende e istituzioni 
+                    <br>del territorio, sviluppando 
+                    <br>collaborazioni e 
+                    <br>progetti condivisi. 
+                    <br>Le sponsorizzazioni
+                    <br> ci permettono
+                    <br> di investire nelle strutture, 
+                    <br>nei materiali e nei programmi,
+                    <br> garantendo un’esperienza di
+                     <br>alta qualità per i nostri 
+                     <br>atleti e sostenendo la 
+                     <br>crescita del calcio nella
+                     <br> nostra comunità. 
+                     <br>spiegazioni piu corte</p>
+                    <div id="modifica">
+                        <a class="servizi" href="">Scopri di più</a>
+                    </div>
+            </div>
+        </div>
+        <div id="vantaggi">
+            <p class="perso">Vantaggi servizi<br></p>
+            <p>_________________________</p>
+            <div id="vantaggiserv">
+                <div class="elemento_centrale">
+                    <img class="squadre" src="laveno.PNG"/>
+                    <p class="testoserv">Partita non meritata</p>
+                </div>
+                <div class="elemento_centrale">
+                    <img class="squadre" src="accademia.PNG"/>
+                    <p class="testoserv">Accademia scarsa</p>
+                </div>
+                <div class="elemento_centrale">
+                    <img class="squadre" src="bisuschio.PNG"/>
+                    <p class="testoserv">Bisuschio cambia sport</p>
+                </div>
+                <div class="elemento_centrale">
+                    <img class="squadre" src="olimpia.PNG"/>
+                    <p class="testoserv">Avremo la rivincita</p>
+                </div>
+            </div>
+        </div>
+            <div id="telecronaca1">
+                <p class="perso"><b>Laveno- <br>Jeraghese</b><br></p>
+                <p>
+                    <br>Testa-coda tra Laveno Mombello e Jeraghese,
+                    <br> con i padroni di casa che condividono la 
+                    <br>vetta della classifica con Cuassese e 
+                    <br>Bodio Buguggiate, e con l’obiettivo di 
+                    <br>approfittare dello scontro diretto tra le 
+                    <br>due antagoniste per mantenere il primato.
+                    <br> La Jeraghese, invece, arriva al match dopo
+                    <br> aver conquistato i suoi primi 3 punti stagionali 
+                    <br>e cerca conferme per continuare la risalita. 
+                    <br>La partita si sviluppa in un equilibrio che sorprende: 
+                    <br>nonostante il divario in classifica, gli ospiti 
+                    <br>mostrano un buon momento di forma e riescono a 
+                    <br>rimanere in partita con grande determinazione.
+                    <br> Il Laveno, però, è decisamente più incisivo 
+                    <br>e al 31′ riesce a capitalizzare la propria superiorità. 
+                    <br>Adaoui, con un gran gol, porta in vantaggio i padroni 
+                    <br>di casa, che sembrano avere il controllo del gioco. 
+                    <br>Nonostante il gol subito, la Jeraghese non si abbatte e, 
+                    <br>senza perdere la lucidità, continua a cercare il pareggio. 
+                    <br>Nella ripresa, il Laveno Mombello mantiene il controllo
+                    <br> della partita e, al 25’, trova il gol del raddoppio grazie 
+                    <br>a un autogol degli ospiti, che di fatto mette fine alla contesa.
+                    <br> La vittoria del Laveno Mombello, seppur non senza 
+                    <br>difficoltà, è comunque meritata e permette alla squadra di 
+                    <br>mantenere il ritmo delle prime della classe, in attesa dei 
+                    <br>risultati dalle altre sfide. Per la Jeraghese, nonostante 
+                    <br>la sconfitta, la prestazione lascia ben sperare: 
+                    <br>la squadra è in netta crescita e, con questo spirito, 
+                    <br>potrà sicuramente dire la sua nel prosieguo del campionato.
+                </p>            
+            </div>
+            <div id="telecronaca2">
+                <p class="perso"><b>Accademia- <br>Jeraghese</b><br></p>
+                <p class="">
+                    <br>In una sfida di bassa classifica, 
+                    <br>il San Luigi Accademy, reduce da
+                    <br> un periodo difficile, cerca di ritrovare
+                    <br> entusiasmo e fiducia contro
+                    <br> una Jeraghese protagonista
+                    <br> di un campionato complicato.
+                    <br> Con soli dieci giocatori di movimento a disposizione,
+                    <br> la formazione ospite, seppur in super emergenza,
+                    <br> è determinata a ottenere un risultato
+                    <br> positivo che possa dare una svolta
+                    <br> alla propria stagione. Il primo tempo si gioca su ritmi contenuti,
+                    <br> con entrambe le squadre che si studiano
+                    <br> e si alternano nel tentativo di prendere il
+                    <br> controllo del gioco. Tuttavia,
+                    <br> la vera emozione arriva negli ultimi
+                    <br> dieci minuti della frazione.
+                    <br> Al 35’, la Jeraghese riesce a passare in vantaggio con Colombo,
+                    <br> ma la risposta del San Luigi non si fa attendere.
+                    <br> Al 40’, infatti, arriva il pareggio dei
+                    <br> padroni di casa con Fontana,
+                    <br> che ristabilisce l’equilibrio su
+                    l<br> punteggio di 1-1. Nella ripresa, la Jeraghese
+                    <br> si dimostra più cinica e concentrata
+                    <br> nel concretizzare le occasioni.
+                    <br> Al 22’, Oussama Aguibi riporta i rosso blu
+                    <br> in vantaggio, e questa volta i padroni di
+                    <br> casa non riescono a trovare
+                    <br> la forza per replicare. Anzi,
+                    <br> a dieci minuti dalla fine, Zanzi mette il punto esclamativo
+                    <br> sulla partita, siglando il gol del definitivo 3-1.
+                    <br> Una vittoria che ha il sapore di una vera e propria
+                    <br> impresa per la Jeraghese, che, nonostante le difficoltà
+                    <br> e l’emergenza, riesce a tirare fuori un 
+                    <br>cuore enorme e conquista tre punti fondamentali.
+                    <br> Per il San Luigi Accademy, un altro passo
+                    <br> falso che complica ulteriormente la situazione in classifica.
+                </p>
+            </div>
+            <div id="telecronaca3">
+                <p class="perso"><b>Jeraghese- <br>Bisuschio</b><br></p>
+                <img class="squadre" src="notelec.PNG"/><p>Non c'era telecronaca</p>
+            </div>
+            <div id="telecronaca4">
+                <p class="perso"><b>jeraghese- <br>Olimpia</b><br></p>
+                <p class="">
+                    <br>La Jeraghese, partita con difficoltà
+                    <br> in questo campionato, sembra
+                    <br> aver finalmente trovato la
+                    <br> propria strada, come testimoniano i punti
+                    <br> guadagnati nelle ultime giornate. Dall’altra parte
+                    <br>, l’Olimpia Tresiana, che si trova a metà classifica,
+                    <br> è intenzionata a lottare per avvicinarsi alle prime posizioni,
+                    <br> evitando di essere risucchiata nelle zone più basse.
+                    <br> La sfida tra le due compagini si presenta equilibrata e,
+                    <br> alla fine, si conclude con un pareggio che non
+                    <br> premia nessuna delle due, ma che racconta bene
+                    <br> l’andamento della partita. Il match
+                    <br> inizia sotto il segno dell’equilibrio,
+                    <br> con entrambe le squadre ben disposte in campo
+                    <br> ma poco incisive in fase offensiva.
+                    <br> Il primo tempo scivola via senza particolari
+                    <br> sussulti e si chiude sullo 0-0,
+                    <br> con le difese che prevalgono sugli attacchi.
+                    <br> Nessuna delle due squadre riesce a creare
+                    <br> occasioni realmente pericolose,
+                    <br> con i portieri impegnati solo in
+                    <br> routine di ordinaria amministrazione.
+                    <br> Nella ripresa, lo scenario non cambia.
+                    <br> Le squadre si studiando, ma non riescono
+                    <br> a decollare nel gioco offensivo.
+                    <br> La svolta arriva al 25′, quando i padroni di casa,
+                    <br> finalmente, riescono a trovare il
+                    <br> guizzo giusto: Oussama Aguibi,
+                    <br> con un colpo preciso, porta in
+                    <br> vantaggio la Jeraghese.
+                    <br> L’Olimpia Tresiana, tuttavia,
+                    <br> non ci sta e reagisce immediatamente.
+                    <br> Al 35′, Demaria riporta la situazione in parità,
+                    <br> segnando il gol dell’1-1 che fissa il risultato.
+                    <br> Negli ultimi dieci minuti, entrambe le formazioni 
+                    <br>cercano di evitare il rischio di subire un gol
+                    <br> che potrebbe rivelarsi fatale,
+                    <br> ma la tensione in campo è palpabile e le difese 
+                    <br>fanno buona guardia. Il match si 
+                    <br>conclude quindi con un pareggio
+                    <br> che lascia soddisfatti i padroni
+                    <br> di casa per i progressi mostrati
+                    <br> rispetto all’inizio della stagione,
+                    <br> mentre l’Olimpia Tresiana porta 
+                    <br>a casa un punto che non cambia significativamente
+                    <br> la sua posizione in classifica. Con questo risultato,
+                    <br> la Jeraghese si conferma come una squadra in netta crescita,
+                    <br> capace di fare un passo avanti dopo un avvio difficile.
+                    <br> L’Olimpia Tresiana, invece, si accontenta
+                    <br> di un punto che, seppur utile, 
+                    <br>non le consente di fare il balzo 
+                    <br>verso le posizioni più alte della classifica. 
+                    <br>Il campionato prosegue e entrambe le squadre saranno
+                    <br> chiamate a lottare per migliorare
+                    <br> ulteriormente i loro obiettivi.
+                </p>
+            </div>
+        </div>
+        <div id="forum"> 
+            <div class="elemento_forum">
+                <p class="persoa">RICHIEDI PREVENTIVO</p>
+                <div class="elementi">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="elementi">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="elementi">
+                    <label for="message">Cosa ci devi dire</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Invia</button>
+            </div>
+        </div>
+        <div id="footer">
+            <h3>Aguibi Youssef, Cavaria Con Premezzo</h3>
+        </div>
+    </div>
+
+</body>
+
+</html>
